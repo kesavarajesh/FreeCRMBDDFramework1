@@ -7,7 +7,7 @@ Scenario Outline: Create a new contact
 	Then User mouse over on contacts menu and selects the New contact link
 	Then User enters contact details "<firstname>", "<lastname>" and "<position>"
 	Then user clicks save button
-	Then Close browser
+	Then Close the Browser
 	
 Examples:
 	|	username	|	password	|	firstname	|	lastname	|	position	|

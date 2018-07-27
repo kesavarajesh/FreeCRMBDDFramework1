@@ -32,6 +32,7 @@ public class loginStepDefinition {
 		Assert.assertEquals("Free CRM software in the cloud powers sales and customer service", driver.getTitle());
 	}
 	
+
 	
 	//Regular Expressions
 	//1.	\"(.*)\"
@@ -58,21 +59,21 @@ public class loginStepDefinition {
 		Assert.assertEquals("CRMPRO", driver.getTitle());
 	}
 	
-	@Given("^User is already on Home Page$")
-	public void user_on_home_page()
-	{
-		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.get("https://www.freecrm.com");
-		
-		WebElement loginBtn= driver.findElement(By.xpath("//input[@type='submit' and @value='Login']"));
-		
-		driver.findElement(By.name("username")).sendKeys("naveenk");
-		driver.findElement(By.name("password")).sendKeys("test@123");
-		
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click()", loginBtn);	
-	}
+//	@Given("^User is already on Home Page$")
+//	public void user_on_home_page()
+//	{
+//		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+//		driver=new ChromeDriver();
+//		driver.get("https://www.freecrm.com");
+//		
+//		WebElement loginBtn= driver.findElement(By.xpath("//input[@type='submit' and @value='Login']"));
+//		
+//		driver.findElement(By.name("username")).sendKeys("naveenk");
+//		driver.findElement(By.name("password")).sendKeys("test@123");
+//		
+//		JavascriptExecutor js=(JavascriptExecutor)driver;
+//		js.executeScript("arguments[0].click()", loginBtn);	
+//	}
 	
 	
 	@When("^User mouse over on contacts menu and selects the New contact link$")
@@ -102,10 +103,10 @@ public class loginStepDefinition {
 		driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
 	}
 	
-
 	@Then("^Close the Browser$")
 	public void close_browser()
 	{
-		driver.quit();
+		driver.close();
+		
 	}
 }
