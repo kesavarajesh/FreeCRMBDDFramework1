@@ -16,7 +16,7 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
 public class DealsStepDefinition {
-
+/*
 	WebDriver driver;
 
 	@Given("^User is already on Free CRM login page$")
@@ -74,4 +74,5 @@ public class DealsStepDefinition {
 	{
 		driver.quit();		
 	}
+	*/
 }
