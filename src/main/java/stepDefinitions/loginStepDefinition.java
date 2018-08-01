@@ -14,7 +14,7 @@ import junit.framework.Assert;
 
 public class loginStepDefinition {
 	
-	WebDriver driver;
+/*	WebDriver driver;
 
 	@Given("^User is already on Free CRM login page$")
 	public void user_already_on_login_page()
@@ -103,10 +103,5 @@ public class loginStepDefinition {
 		driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
 	}
 	
-	@Then("^Close the Browser$")
-	public void close_browser()
-	{
-		driver.close();
-		
-	}
+	*/
 }
